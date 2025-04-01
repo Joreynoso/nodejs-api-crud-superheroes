@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include('partials/head') %><!-- body -->
+
+  <body class="bg-[#0D0D0D]">
+    <!-- Main container -->
+    <div class="w-full h-full md:h-screen grid grid-cols-1 md:grid-cols-12 overflow-hidden">
+      <!-- Sidebar (Navbar) -->
+      <%- include('partials/sidebar') %><!-- Main Content -->
+      <div class="grid-cols-1 md:col-span-10 h-full overflow-y-auto">
+        <!-- Grid Container -->
+        <div class="grid p-4 gap-4">
+          <h2
+            class="uppercase font-semibold text-[#d4d4d4] text-center md:text-left lg:text-left text-lg box-border"
+          >
+            Detalle del <span class="text-[#45E77A]">superhéroe</span>
+          </h2>
+
+          <!-- detalle del superheroe -->
+          <div
+            class="box-border grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 grid-rows-2 w-full min-h-[300px] gap-4"
+          >
+            <div
+              class="p-6 rounded-lg bg-[#111111] box-border col-span-full lg:col-span-2 row-span-2 flex flex-col gap-6 border-2 border-transparent hover:border-[#45E77A] hover:border-opacity-50 transition-all duration-300"
+            >
+              <!-- item attribute -->
+              <div class="flex flex-col w-full">
+                <h2 class="text-base font-semibold text-[#e2e8f0]">Superhéroe</h2>
+                <div class="bg-[#181818] w-full p-3 text-[#8a8a8a] rounded-lg">
+                  <%= heroe.nombreSuperHeroe %>
+                </div>
+              </div>
+
+              <!-- item attribute -->
+              <div class="flex flex-col w-full">
+                <h2 class="text-base font-semibold text-[#e2e8f0]">Nombre Real</h2>
+                <div class="bg-[#181818] w-full p-3 text-[#8a8a8a] rounded-lg">
+                  <%= heroe.nombreReal %>
+                </div>
+              </div>
+
+              <!-- item attribute -->
+              <div class="flex flex-col w-full">
+                <h2 class="text-base font-semibold text-[#e2e8f0]">Planeta de Origen</h2>
+                <div class="bg-[#181818] w-full p-3 text-[#8a8a8a] rounded-lg">
+                  <%= heroe.planetaOrigen %>
+                </div>
+              </div>
+
+              <!-- item attribute -->
+              <div class="flex flex-col w-full">
+                <h2 class="text-base font-semibold text-[#e2e8f0]">Edad</h2>
+                <div class="bg-[#181818] w-full p-3 text-[#8a8a8a] rounded-lg">
+                  <%= heroe.edad %>
+                </div>
+              </div>
+
+              <!-- item attribute -->
+              <div class="flex flex-col w-full">
+                <h2 class="text-base font-semibold text-[#e2e8f0]">Debilidad</h2>
+                <div class="bg-[#181818] w-full p-3 text-[#8a8a8a] rounded-lg">
+                  <%= heroe.debilidad %>
+                </div>
+              </div>
+
+              <!-- item attribute -->
+              <div class="flex flex-col w-full">
+                <h2 class="text-base font-semibold text-[#e2e8f0]">Creador</h2>
+                <div class="bg-[#181818] w-full p-3 text-[#8a8a8a] rounded-lg">
+                  <%= heroe.creador %>
+                </div>
+              </div>
+            </div>
+
+            <!-- poderes icon -->
+            <div
+              class="p-6 rounded-lg bg-[#111111] box-border col-span-full md:col-span-1 lg:row-span-1 lg:col-span-1 flex flex-col gap-4 items-center justify-center border-2 border-transparent hover:border-[#45E77A] hover:border-opacity-50 transition-all duration-300"
+            >
+              <div
+                class="h-3/4 rounded-lg im w-full overflow-hidden flex justify-center items-center"
+              >
+                <img
+                  src="../img/icon_power.jpg"
+                  alt="icon_power"
+                  class="max-w-full max-h-full scale-125"
+                />
+              </div>
+              <div class="h-1/4 rounded-lg text-info w-full flex justify-center items-center">
+                <h2 class="uppercase font-semibold text-[#d4d4d4]">
+                  poderes: <span> <%= stats.cantPoderes %> </span>
+                </h2>
+              </div>
+            </div>
+
+            <!-- aliados icon -->
+            <div
+              class="p-6 rounded-lg bg-[#111111] box-border col-span-full md:col-span-1 lg:row-span-1 lg:col-span-1 flex flex-col gap-4 items-center justify-center border-2 border-transparent hover:border-[#45E77A] hover:border-opacity-50 transition-all duration-300"
+            >
+              <div
+                class="h-3/4 rounded-lg im w-full overflow-hidden flex justify-center items-center"
+              >
+                <img
+                  src="../img/icon_allies.jpg"
+                  alt="icon_allies"
+                  class="max-w-full max-h-full scale-125"
+                />
+              </div>
+              <div class="h-1/4 rounded-lg text-info w-full flex justify-center items-center">
+                <h2 class="uppercase font-semibold text-[#d4d4d4]">
+                  aliados: <span> <%= stats.cantAliados %> </span>
+                </h2>
+              </div>
+            </div>
+
+            <!-- enemigos icon -->
+            <div
+              class="p-6 rounded-lg bg-[#111111] box-border col-span-full md:col-span-1 lg:row-span-1 lg:col-span-1 flex flex-col gap-4 items-center justify-center border-2 border-transparent hover:border-[#45E77A] hover:border-opacity-50 transition-all duration-300"
+            >
+              <div
+                class="h-3/4 rounded-lg im w-full overflow-hidden flex justify-center items-center"
+              >
+                <img
+                  src="../img/icon_enemies.jpg"
+                  alt="icon_enemies"
+                  class="max-w-full max-h-full scale-125"
+                />
+              </div>
+              <div class="h-1/4 rounded-lg text-info w-full flex justify-center items-center">
+                <h2 class="uppercase font-semibold text-[#d4d4d4]">
+                  enemigos: <span> <%= stats.cantEnemigos %> </span>
+                </h2>
+              </div>
+            </div>
+
+            <!-- poderes, enemigos, aliados -->
+            <div
+              class="p-6 rounded-lg bg-[#111111] box-border col-span-3 row-span-1 flex flex-col gap-4 border-2 border-transparent hover:border-[#45E77A] hover:border-opacity-50 transition-all duration-300"
+            >
+              <!-- item attribute -->
+              <div class="flex flex-col w-full">
+                <h2 class="text-base font-semibold text-[#e2e8f0]">Poderes</h2>
+                <div class="bg-[#181818] w-full p-3 text-[#8a8a8a] rounded-lg">
+                  <%= heroe.poderes.join(', ')%>
+                </div>
+              </div>
+
+              <!-- item attribute -->
+              <div class="flex flex-col w-full">
+                <h2 class="text-base font-semibold text-[#e2e8f0]">Aliados</h2>
+                <div class="bg-[#181818] w-full p-3 text-[#8a8a8a] rounded-lg">
+                  <%= heroe.aliados.join(', ')%>
+                </div>
+              </div>
+
+              <!-- item attribute -->
+              <div class="flex flex-col w-full">
+                <h2 class="text-base font-semibold text-[#e2e8f0]">Enemigos</h2>
+                <div class="bg-[#181818] w-full p-3 text-[#8a8a8a] rounded-lg">
+                  <%= heroe.enemigos.join(',')%>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

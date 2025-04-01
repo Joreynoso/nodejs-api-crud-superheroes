@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include('partials/head') %><!-- body -->
+
+  <body class="bg-[#0D0D0D]">
+    <!-- Main container -->
+    <div class="w-full h-full md:h-screen grid grid-cols-1 md:grid-cols-12 overflow-hidden">
+      <!-- Sidebar (Navbar) -->
+      <%- include('partials/sidebar') %><!-- Main Content -->
+      <div class="grid-cols-1 md:col-span-10 h-full overflow-y-auto">
+        <!-- Grid Container -->
+        <div class="grid p-4 gap-4">
+            <h2 class="uppercase font-semibold text-[#d4d4d4] text-center md:text-left lg:text-left text-lg p-4">
+                Agregar un nuevo <span class="text-[#45E77A]">superhéroe</span></h2>
+          <!-- Formulario de edición -->
+          <form
+            action="/heroes/agregar" method="POST"
+            class="w-full grid grid-cols-1 md:grid-cols-6 md:grid-rows-3 gap-4"
+          >
+            <!-- información básica -->
+            <!-- Campo oculto para simular el método PUT -->
+            <input type="hidden" name="_method" value="PUT">
+            
+            <!-- nombreSuperheroe -->
+            <div class="bg-[#111111] gap-4 p-6 md:col-span-3 lg:col-span-2 row-span-3 flex flex-col">
+              <label class="text-[#e2e8f0]" for="nombreSuperHeroe">Nombre Superhéroe</label>
+              <input
+                class="bg-[#181818] text-[#8a8a8a] rounded-lg p-3 w-full"
+                type="text"
+                id="nombreSuperHeroe"
+                name="nombreSuperHeroe"
+                required
+                minlength="3"
+                maxlength="60"
+              />
+
+              <!-- nombreReal -->
+              <label class="text-[#e2e8f0]" for="nombreReal">Nombre Real</label>
+              <input
+                class="bg-[#181818] text-[#8a8a8a] rounded-lg p-3 w-full"
+                type="text"
+                id="nombreReal"
+                name="nombreReal"
+                required
+                minlength="3"
+                maxlength="60"
+              />
+
+              <!-- edad -->
+              <label class="text-[#e2e8f0]" for="edad">Edad</label>
+              <input
+                class="bg-[#181818] text-[#8a8a8a] rounded-lg p-3 w-full"
+                type="number"
+                id="edad"
+                name="edad"
+                required
+                min="1"
+              />
+
+            <!-- creador -->
+              <label class="text-[#e2e8f0]" for="creador">Creador</label>
+              <input
+                class="bg-[#181818] text-[#8a8a8a] rounded-lg p-3 w-full"
+                type="text"
+                id="creador"
+                name="creador"
+                required
+                minlength="3"
+                maxlength="60"
+              />
+
+              <!-- debilidad -->
+              <label class="text-[#e2e8f0]" for="debilidad">Debilidad</label>
+              <input
+                class="bg-[#181818] text-[#8a8a8a] rounded-lg p-3 w-full"
+                type="text"
+                id="debilidad"
+                name="debilidad"
+                required
+                minlength="3"
+                maxlength="60"
+              />
+
+              <!-- olanetaOrigen -->
+              <label class="text-[#e2e8f0]" for="debilidad">Planeta de Origen</label>
+              <input
+                class="bg-[#181818] text-[#8a8a8a] rounded-lg p-3 w-full"
+                type="text"
+                id="planetaOrigen"
+                name="planetaOrigen"
+                required
+                minlength="3"
+                maxlength="60"
+              />
+            </div>
+
+            <!-- poderes -->
+            <div class="bg-[#111111] gap-4 p-6 row-span-1 md:col-span-3 lg:col-span-4 flex flex-col">
+              <label class="text-[#e2e8f0]" for="poderes">Poderes (separados por " , ")</label>
+              <input
+                class="bg-[#181818] text-[#8a8a8a] rounded-lg p-3"
+                type="text"
+                id="poderes"
+                name="poderes"
+                value=""
+                required
+              />
+            </div>
+
+            <!-- enemigos -->
+            <div class="bg-[#111111] gap-4 p-6 row-span-1 md:col-span-3 lg:col-span-4 flex flex-col">
+              <label class="text-[#e2e8f0]" for="enemigos">Enemigos (separados por " , ")</label>
+              <input
+                class="bg-[#181818] text-[#8a8a8a] rounded-lg p-3"
+                type="text"
+                id="enemigos"
+                name="enemigos"
+                value=""
+                required
+              />
+            </div>
+
+            <!-- aliados -->
+            <div class="bg-[#111111] gap-4 p-6 md:col-span-3 lg:col-span-4 flex flex-col">
+              <label class="text-[#e2e8f0]" for="aliados">Aliados (separados por " , ")</label>
+              <input
+                class="bg-[#181818] text-[#8a8a8a] rounded-lg p-3"
+                type="text"
+                id="aliados"
+                name="aliados"
+                value=""
+                required
+              />
+            </div>
+
+            <div class="bg-[#111111] col-span-full flex justify-end items-center">
+              <button
+                class="font-semibold w-1/3 bg-gradient-to-tr from-[#53E897] to-[#45E77A] hover:from-[#45E77A] hover:to-[#53E897] transition-all duration-300 p-3 rounded-lg flex items-center justify-center hover:bg-[#45E77A]"
+                type="submit"
+              >
+                Crear héroe
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
