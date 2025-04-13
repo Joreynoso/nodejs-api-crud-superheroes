@@ -1,4 +1,3 @@
-import heroRepository from '../repositories/heroRepository.js'
 import HeroRepository from '../repositories/heroRepository.js'
 
 class HeroService {
