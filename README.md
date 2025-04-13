@@ -57,5 +57,3 @@ http://localhost:3000/heroes
 ---
 
 📌 **Nota:** Asegúrate de tener MongoDB en ejecución antes de iniciar el servidor.
-
-✉️ Para dudas o sugerencias, contáctame en [tu correo o redes sociales].
