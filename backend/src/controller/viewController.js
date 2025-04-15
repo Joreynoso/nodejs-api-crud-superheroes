@@ -10,7 +10,7 @@ class ViewController {
 
       const origen = 1
 
-      res.render('dashboard', { heroes: heroes, origin: origen })
+      res.render('heroList', { heroes: heroes, origin: origen })
     } catch (error) {
       res.status(500).json({
         message: 'error al renderizar todos los héroes',
@@ -33,7 +33,7 @@ class ViewController {
       }
 
       // renderizar la vista
-      res.render('dashboard', { heroes: mayores30 })
+      res.render('heroList', { heroes: mayores30 })
     } catch (error) {
       res.status(500).json({
         message: 'error al renderizar todos los héroes',

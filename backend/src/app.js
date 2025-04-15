@@ -6,6 +6,7 @@ import heroRouter from './routes/heroRoutes.js';
 import loggerMiddleware from './middlewares/loggerMiddleware.js';
 import viewRouter from './routes/viewRoutes.js';
 import methodOverride from 'method-override';
+import expressLayouts from 'express-ejs-layouts'
 
 // Obtener la ruta actual del archivo
 const __filename = fileURLToPath(import.meta.url);
@@ -38,6 +39,10 @@ app.set('views', pathComplete);
 
 // Servir archivos estáticos
 app.use(express.static(pathView));
+
+// Configurar express layouts
+app.use(expressLayouts)
+app.set('layout', 'dashboard')
 
 // Ruta para las API
 app.use('/api', heroRouter);
